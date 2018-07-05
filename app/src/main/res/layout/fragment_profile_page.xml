@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/left_border_guideline"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/right_border_guideline"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <TextView
+            android:id="@+id/favorite_original_films_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:drawableEnd="@drawable/ic_advance_arrow"
+            android:drawablePadding="5dp"
+            android:text="@string/favorite_original_films"
+            android:textSize="@dimen/text_subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/favorite_original_films_discrete_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            app:dsv_orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_original_films_text_view" />
+
+        <TextView
+            android:id="@+id/favorite_short_films_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:drawableEnd="@drawable/ic_advance_arrow"
+            android:drawablePadding="5dp"
+            android:text="@string/fav_features"
+            android:textSize="@dimen/text_subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_original_films_discrete_scroll_view" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/favorite_short_films_discrete_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            app:dsv_orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_short_films_text_view" />
+
+        <TextView
+            android:id="@+id/favorite_feature_films_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:drawableEnd="@drawable/ic_advance_arrow"
+            android:drawablePadding="5dp"
+            android:text="@string/favorite_short_films"
+            android:textSize="@dimen/text_subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_short_films_discrete_scroll_view" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/favorite_feature_films_discrete_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            app:dsv_orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_feature_films_text_view" />
+
+        <TextView
+            android:id="@+id/favorite_music_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:drawableEnd="@drawable/ic_advance_arrow"
+            android:drawablePadding="5dp"
+            android:text="@string/favorite_music_videos"
+            android:textSize="@dimen/text_subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_feature_films_discrete_scroll_view" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/favorite_music_discrete_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            app:dsv_orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_music_text_view" />
+
+        <TextView
+            android:id="@+id/favorite_documentaries_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:drawableEnd="@drawable/ic_advance_arrow"
+            android:drawablePadding="5dp"
+            android:text="@string/favorite_documentaries"
+            android:textSize="@dimen/text_subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_music_discrete_scroll_view" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/favorite_documentaries_discrete_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            app:dsv_orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_documentaries_text_view" />
+
+        <TextView
+            android:id="@+id/nk_live_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:drawableEnd="@drawable/ic_advance_arrow"
+            android:drawablePadding="5dp"
+            android:text="@string/nk_live"
+            android:textSize="@dimen/text_subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/favorite_documentaries_discrete_scroll_view" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/nk_live_discrete_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            app:dsv_orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/nk_live_text_view" />
+
+        <TextView
+            android:id="@+id/nk_link_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:drawableEnd="@drawable/ic_advance_arrow"
+            android:drawablePadding="5dp"
+            android:text="@string/nk_link"
+            android:textSize="@dimen/text_subhead"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/nk_live_discrete_scroll_view" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/nk_link_discrete_scroll_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            app:dsv_orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+            app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+            app:layout_constraintTop_toBottomOf="@id/nk_link_text_view" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

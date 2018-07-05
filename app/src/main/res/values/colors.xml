@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="headerBackgroundColor">#000000</color>
+    <color name="textInputBackgroundPrimary">#c6aa66</color>
+    <color name="buttonTextColor">#ffffff</color>
+    <color name="buttonBackgroundColor">#b29241</color>
+    <color name="bottomNavigationTextColor">#ffffff</color>
+    <color name="textInputHint">#ffffff</color>
+    <color name="colorAccent">#b29241</color>
+    <color name="currentItemOverlay">@android:color/transparent</color>
+    <color name="itemOverlay">#cc000000</color>
+</resources>

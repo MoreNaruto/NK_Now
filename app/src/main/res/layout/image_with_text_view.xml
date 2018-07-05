@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/original_films_image_view"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:contentDescription="@string/original_films"
+        android:src="@drawable/original_films" />
+
+    <TextView
+        android:id="@+id/original_films_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/original_films"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/original_films_image_view"
+        app:layout_constraintEnd_toEndOf="@id/original_films_image_view"
+        app:layout_constraintStart_toStartOf="@id/original_films_image_view"
+        app:layout_constraintTop_toTopOf="@id/original_films_image_view" />
+</merge>

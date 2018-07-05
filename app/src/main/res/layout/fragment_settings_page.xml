@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/spacing_medium">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/username_info_guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/picture_info_guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/picture_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/photo_woman_on_phone"
+        android:contentDescription="@string/user_photo"
+        app:layout_constraintBottom_toTopOf="@id/username_info_guideline"
+        app:layout_constraintEnd_toStartOf="@id/picture_info_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/username_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:text="@string/username"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/picture_image_view"
+        app:layout_constraintStart_toEndOf="@id/picture_image_view"
+        app:layout_constraintTop_toTopOf="@id/picture_image_view" />
+
+    <TextView
+        android:id="@+id/membership_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/premium_member"
+        android:textSize="@dimen/text_body"
+        app:layout_constraintStart_toStartOf="@id/username_text_view"
+        app:layout_constraintTop_toBottomOf="@id/username_text_view" />
+
+    <View
+        android:id="@+id/offline_mode_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/username_info_guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/offline_mode_guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <TextView
+        android:id="@+id/offline_mode_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/offline_mode"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/offline_mode_border"
+        app:layout_constraintTop_toBottomOf="@id/optimized_playback_border" />
+
+    <TextView
+        android:id="@+id/offline_mode_description_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/offline_description"
+        android:textSize="@dimen/text_caption"
+        app:layout_constraintTop_toBottomOf="@id/offline_mode_text_view" />
+
+    <Switch
+        android:id="@+id/offline_mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/offline_mode_description_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/offline_mode_text_view" />
+
+    <View
+        android:id="@+id/optimized_playback_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/offline_mode_guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/optimized_playback_guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.51" />
+
+    <TextView
+        android:id="@+id/optimized_playback_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/optimized_playback"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/optimized_playback_border"
+        app:layout_constraintTop_toBottomOf="@id/loudness_normalization_border" />
+
+    <TextView
+        android:id="@+id/optimized_playback_description_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_xxlarge"
+        android:text="@string/optimized_playback_description"
+        android:textSize="@dimen/text_caption"
+        app:layout_constraintEnd_toStartOf="@id/optimized_playback_switch"
+        app:layout_constraintTop_toBottomOf="@id/optimized_playback_text_view" />
+
+    <Switch
+        android:id="@+id/optimized_playback_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@id/optimized_playback_description_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/optimized_playback_text_view" />
+
+    <View
+        android:id="@+id/loudness_normalization_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/optimized_playback_guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/loudness_normalization_guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <TextView
+        android:id="@+id/loudness_normalization_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loudness_normalization"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/loudness_normalization_border"
+        app:layout_constraintTop_toBottomOf="@id/streaming_border" />
+
+    <Switch
+        android:id="@+id/loudness_normalization_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintBottom_toTopOf="@id/loudness_normalization_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/streaming_border" />
+
+    <View
+        android:id="@+id/streaming_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/loudness_normalization_guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/streaming_guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:id="@+id/wifi_streaming_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:text="@string/wifi_streaming"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/streaming_border" />
+
+    <TextView
+        android:id="@+id/wifi_streaming_normal_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:text="@string/normal"
+        android:textSize="@dimen/text_subhead"
+        app:layout_constraintBottom_toBottomOf="@id/wifi_streaming_text_view"
+        app:layout_constraintEnd_toStartOf="@id/wifi_streaming_high_text_view"
+        app:layout_constraintTop_toTopOf="@id/wifi_streaming_text_view" />
+
+    <TextView
+        android:id="@+id/wifi_streaming_high_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/high_with_checkmark"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/wifi_streaming_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/wifi_streaming_text_view" />
+
+    <TextView
+        android:id="@+id/cellular_streaming_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:text="@string/cellular_streaming"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/sign_out_border"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cellular_streaming_normal_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:text="@string/normal"
+        android:textSize="@dimen/text_subhead"
+        app:layout_constraintBottom_toBottomOf="@id/cellular_streaming_text_view"
+        app:layout_constraintEnd_toStartOf="@id/cellular_streaming_high_text_view"
+        app:layout_constraintTop_toTopOf="@id/cellular_streaming_text_view" />
+
+    <TextView
+        android:id="@+id/cellular_streaming_high_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/high_with_checkmark"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/cellular_streaming_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cellular_streaming_text_view" />
+
+    <View
+        android:id="@+id/sign_out_border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/streaming_guideline" />
+
+    <TextView
+        android:id="@+id/sign_out_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_out"
+        android:textSize="@dimen/text_subhead"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/spacing_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_out_border"/>
+
+    <TextView
+        android:id="@+id/version_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/version"
+        android:textSize="@dimen/text_body"
+        android:layout_marginTop="@dimen/spacing_xxsmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_out_text_view"
+        />
+
+</android.support.constraint.ConstraintLayout>

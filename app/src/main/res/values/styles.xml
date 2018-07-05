@@ -1,0 +1,31 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="TextLabel" parent="Theme.AppCompat">
+        <item name="android:textColorHint">@color/textInputHint</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_subhead</item>
+    </style>
+
+    <style name="Button" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:background">@color/buttonBackgroundColor</item>
+    </style>
+
+    <style name="BottomNavigation">
+        <!--<item name="itemBackground">@drawable/navigation_bar_item</item>-->
+        <item name="itemIconTint">@color/bottomNavigationTextColor</item>
+        <item name="itemTextColor">@color/bottomNavigationTextColor</item>
+    </style>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/featuredFilmTwo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/feature_film_five_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Something"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_five" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000" />
+
+    <TextView
+        android:id="@+id/column_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/tasty_treats"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/top_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/column_textview"
+        android:layout_below="@id/column_textview"
+        android:text="@string/top_10_popsicle_flavors"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/item_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/top_textview"
+        android:layout_below="@id/top_textview"
+        android:layout_marginTop="7dp"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/subtitle_description"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_caption" />
+
+</RelativeLayout>

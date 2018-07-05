@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <it.chengdazhi.decentbanner.DecentBanner
+            android:id="@+id/decent_banner"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <TextView
+            android:id="@+id/trending_videos_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/headerBackgroundColor"
+            android:text="@string/trending_videos"
+            android:textSize="@dimen/text_headline"
+            app:layout_constraintTop_toBottomOf="@id/decent_banner" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/trending_videos_discrete_scroll_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:dsv_orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/trending_videos_text_view" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
