@@ -66,10 +66,32 @@
                 android:layout_width="0dp"
                 android:layout_height="250dp"
                 android:background="@drawable/rectangle_border"
-                app:layout_constraintBottom_toTopOf="@id/features_image_view"
                 app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
                 app:layout_constraintStart_toEndOf="@id/left_border_guideline"
                 app:layout_constraintTop_toBottomOf="@id/trending_events_text_view" />
+
+            <TextView
+                android:id="@+id/best_in_fest_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:drawableEnd="@drawable/ic_advance_arrow"
+                android:drawablePadding="5dp"
+                android:text="@string/best_in_fest"
+                android:textSize="@dimen/text_subhead"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+                app:layout_constraintTop_toBottomOf="@id/trending_films_banner" />
+
+            <it.chengdazhi.decentbanner.DecentBanner
+                android:id="@+id/best_in_fest_banner"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:background="@drawable/rectangle_border"
+                app:layout_constraintBottom_toTopOf="@id/features_image_view"
+                app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+                app:layout_constraintStart_toEndOf="@id/left_border_guideline"
+                app:layout_constraintTop_toBottomOf="@id/best_in_fest_text_view" />
 
             <ImageView
                 android:id="@+id/features_image_view"
@@ -81,7 +103,7 @@
                 android:src="@drawable/features"
                 app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
                 app:layout_constraintStart_toEndOf="@id/left_border_guideline"
-                app:layout_constraintTop_toBottomOf="@id/trending_films_banner" />
+                app:layout_constraintTop_toBottomOf="@id/best_in_fest_banner" />
 
             <TextView
                 android:id="@+id/features_text_view"

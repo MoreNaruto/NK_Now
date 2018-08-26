@@ -59,4 +59,12 @@
     <string name="fav_features">FAV FEATURES</string>
     <string name="favorite_music_videos">FAV MUSIC VIDEOS</string>
     <string name="favorite_documentaries">FAV DOCUMENTARIES</string>
+    <string name="best_in_fest">BEST IN FEST</string>
+    <string name="sundance">SUNDANCE</string>
+    <string name="tribeca">TRIBECA</string>
+    <string name="cannes">CANNES</string>
+    <string name="berlin">BERLIN</string>
+    <string name="venice">VENICE</string>
+    <string name="rain_dance">RAIN DANCE</string>
+    <string name="tiff">T.I.F.F</string>
 </resources>
