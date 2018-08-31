@@ -2,11 +2,11 @@ package ao.now.nk.nk_now_app.fragments;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,6 @@ import java.util.List;
 
 import ao.now.nk.nk_now_app.R;
 import ao.now.nk.nk_now_app.databinding.FragmentFilmPageBinding;
-import it.chengdazhi.decentbanner.DecentBanner;
 
 public class FilmFragment extends Fragment {
     public static final String TAG = FilmFragment.class.getSimpleName();
@@ -50,9 +49,49 @@ public class FilmFragment extends Fragment {
         startBestInFilmBanner();
         startTrendingFilmsBanner();
         startNewFilmBanner();
-        setURLLinksForViews();
+        startMonthlyContestBanner();
+        setNavigationForOnCLickListeners();
 
         super.onViewCreated(view, savedInstanceState);
+    }
+
+    private void startMonthlyContestBanner() {
+        View features = getActivity().getLayoutInflater().inflate(R.layout.featured_film_6, null);
+        View shorts = getActivity().getLayoutInflater().inflate(R.layout.featured_film_6, null);
+        View documentaries = getActivity().getLayoutInflater().inflate(R.layout.featured_film_6, null);
+        View musicVideos = getActivity().getLayoutInflater().inflate(R.layout.featured_film_6, null);
+
+        ImageView featuresImageView = features.findViewById(R.id.default_banner_image_view);
+        TextView featuresTitle = features.findViewById(R.id.default_banner_title);
+        ImageView shortsImageView = shorts.findViewById(R.id.default_banner_image_view);
+        TextView shortsTitle = shorts.findViewById(R.id.default_banner_title);
+        ImageView documentariesImageView = documentaries.findViewById(R.id.default_banner_image_view);
+        TextView documentariesTitle = documentaries.findViewById(R.id.default_banner_title);
+        ImageView musicVideosImageView = musicVideos.findViewById(R.id.default_banner_image_view);
+        TextView musicVideosTitle = musicVideos.findViewById(R.id.default_banner_title);
+
+        featuresImageView.setBackgroundResource(R.drawable.features);
+        featuresTitle.setText(R.string.features);
+        shortsImageView.setBackgroundResource(R.drawable.new_films);
+        shortsTitle.setText(R.string.shorts);
+        documentariesImageView.setBackgroundResource(R.drawable.documentaries);
+        documentariesTitle.setText(R.string.documentaries);
+        musicVideosImageView.setBackgroundResource(R.drawable.music_video);
+        musicVideosTitle.setText(R.string.music_videos);
+
+        List<View> monthlyContestBannerListViews = new ArrayList<>();
+        monthlyContestBannerListViews.add(features);
+        monthlyContestBannerListViews.add(shorts);
+        monthlyContestBannerListViews.add(documentaries);
+        monthlyContestBannerListViews.add(musicVideos);
+
+        List<String> monthlyContestFilmsTitle = new ArrayList<>();
+        monthlyContestFilmsTitle.add(".");
+        monthlyContestFilmsTitle.add(".");
+        monthlyContestFilmsTitle.add(".");
+        monthlyContestFilmsTitle.add(".");
+
+        binding.monthlyContestBanner.start(monthlyContestBannerListViews, monthlyContestFilmsTitle, 2, 500, R.drawable.ic_launcher);
     }
 
     private void startBestInFilmBanner() {
@@ -64,20 +103,20 @@ public class FilmFragment extends Fragment {
         View rainDance = getActivity().getLayoutInflater().inflate(R.layout.featured_film_6, null);
         View tiff = getActivity().getLayoutInflater().inflate(R.layout.featured_film_6, null);
 
-        ImageView sunDanceImageView = sunDance.findViewById(R.id.best_in_fest_image_view);
-        TextView sunDanceTitle = sunDance.findViewById(R.id.best_in_fest_title);
-        ImageView tribecaImageView = tribeca.findViewById(R.id.best_in_fest_image_view);
-        TextView tribecaTitle = tribeca.findViewById(R.id.best_in_fest_title);
-        ImageView cannesImageView = cannes.findViewById(R.id.best_in_fest_image_view);
-        TextView cannesTitle = cannes.findViewById(R.id.best_in_fest_title);
-        ImageView berlinImageView = berlin.findViewById(R.id.best_in_fest_image_view);
-        TextView berlinTitle = berlin.findViewById(R.id.best_in_fest_title);
-        ImageView veniceImageView = venice.findViewById(R.id.best_in_fest_image_view);
-        TextView veniceTitle = venice.findViewById(R.id.best_in_fest_title);
-        ImageView rainDanceImageView = rainDance.findViewById(R.id.best_in_fest_image_view);
-        TextView rainDanceTitle = rainDance.findViewById(R.id.best_in_fest_title);
-        ImageView tiffImageView = tiff.findViewById(R.id.best_in_fest_image_view);
-        TextView tiffTitle = tiff.findViewById(R.id.best_in_fest_title);
+        ImageView sunDanceImageView = sunDance.findViewById(R.id.default_banner_image_view);
+        TextView sunDanceTitle = sunDance.findViewById(R.id.default_banner_title);
+        ImageView tribecaImageView = tribeca.findViewById(R.id.default_banner_image_view);
+        TextView tribecaTitle = tribeca.findViewById(R.id.default_banner_title);
+        ImageView cannesImageView = cannes.findViewById(R.id.default_banner_image_view);
+        TextView cannesTitle = cannes.findViewById(R.id.default_banner_title);
+        ImageView berlinImageView = berlin.findViewById(R.id.default_banner_image_view);
+        TextView berlinTitle = berlin.findViewById(R.id.default_banner_title);
+        ImageView veniceImageView = venice.findViewById(R.id.default_banner_image_view);
+        TextView veniceTitle = venice.findViewById(R.id.default_banner_title);
+        ImageView rainDanceImageView = rainDance.findViewById(R.id.default_banner_image_view);
+        TextView rainDanceTitle = rainDance.findViewById(R.id.default_banner_title);
+        ImageView tiffImageView = tiff.findViewById(R.id.default_banner_image_view);
+        TextView tiffTitle = tiff.findViewById(R.id.default_banner_title);
 
         sunDanceImageView.setBackgroundResource(R.drawable.sundance);
         sunDanceTitle.setText(R.string.sundance);
@@ -115,7 +154,16 @@ public class FilmFragment extends Fragment {
         binding.bestInFestBanner.start(bestInFilmsBannerListViews, bestInFilmsTitle, 2, 500, R.drawable.ic_launcher);
     }
 
-    private void setURLLinksForViews() {
+    private void setNavigationForOnCLickListeners() {
+        binding.featuredFinalistFilmsTextView.setOnClickListener(v -> {
+            BottomNavigationView navigation = getActivity().findViewById(R.id.navigation);
+            navigation.setSelectedItemId(R.id.navigation_profile);
+        });
+        binding.monthlyContestTextView.setOnClickListener(v -> {
+            BottomNavigationView navigation = getActivity().findViewById(R.id.navigation);
+            navigation.setSelectedItemId(R.id.navigation_profile);
+        });
+        binding.trendingEventsTextView.setOnClickListener(v -> goToUrl("https://www.newkingstonfilm.com/nk-media"));
         binding.originalFilmsImageView.setOnClickListener(v -> goToUrl("https://www.newkingstonfilm.com/nk-films"));
         binding.nkLinkImageView.setOnClickListener(v -> goToUrl("https://www.newkingstonfilm.com/nk-link"));
         binding.nkLiveImageView.setOnClickListener(v -> goToUrl("https://www.newkingstonfilm.com"));

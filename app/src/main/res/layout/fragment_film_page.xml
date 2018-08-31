@@ -13,6 +13,13 @@
             android:layout_height="wrap_content">
 
             <android.support.constraint.Guideline
+                android:id="@+id/top_border_guideline"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.02" />
+
+            <android.support.constraint.Guideline
                 android:id="@+id/left_border_guideline"
                 android:layout_width="1dp"
                 android:layout_height="wrap_content"
@@ -30,14 +37,14 @@
                 android:id="@+id/featured_finalist_films_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_medium"
+                android:paddingTop="@dimen/spacing_medium"
                 android:drawableEnd="@drawable/ic_advance_arrow"
                 android:drawablePadding="5dp"
-                android:text="@string/featured_finalists"
+                android:text="@string/explore_finalists"
                 android:textSize="@dimen/text_subhead"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/left_border_guideline"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/top_border_guideline" />
 
             <it.chengdazhi.decentbanner.DecentBanner
                 android:id="@+id/new_films_banner"
@@ -88,104 +95,33 @@
                 android:layout_width="0dp"
                 android:layout_height="250dp"
                 android:background="@drawable/rectangle_border"
-                app:layout_constraintBottom_toTopOf="@id/features_image_view"
+                app:layout_constraintBottom_toTopOf="@id/monthly_contest_text_view"
                 app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
                 app:layout_constraintStart_toEndOf="@id/left_border_guideline"
                 app:layout_constraintTop_toBottomOf="@id/best_in_fest_text_view" />
 
-            <ImageView
-                android:id="@+id/features_image_view"
-                android:layout_width="0dp"
-                android:layout_height="250dp"
-                android:layout_marginBottom="@dimen/spacing_medium"
+            <TextView
+                android:id="@+id/monthly_contest_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_medium"
-                android:contentDescription="@string/features"
-                android:src="@drawable/features"
-                app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
+                android:drawableEnd="@drawable/ic_advance_arrow"
+                android:drawablePadding="5dp"
+                android:text="@string/monthly_contests"
+                android:textSize="@dimen/text_subhead"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/left_border_guideline"
                 app:layout_constraintTop_toBottomOf="@id/best_in_fest_banner" />
 
-            <TextView
-                android:id="@+id/features_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/features"
-                android:textColor="@android:color/white"
-                app:layout_constraintBottom_toBottomOf="@id/features_image_view"
-                app:layout_constraintEnd_toEndOf="@id/features_image_view"
-                app:layout_constraintStart_toStartOf="@id/features_image_view"
-                app:layout_constraintTop_toTopOf="@id/features_image_view" />
-
-
-            <ImageView
-                android:id="@+id/new_shorts_films_image_view"
+            <it.chengdazhi.decentbanner.DecentBanner
+                android:id="@+id/monthly_contest_banner"
                 android:layout_width="0dp"
                 android:layout_height="250dp"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:contentDescription="@string/shorts"
-                android:src="@drawable/new_films"
+                android:background="@drawable/rectangle_border"
+                app:layout_constraintBottom_toTopOf="@id/original_films_image_view"
                 app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
                 app:layout_constraintStart_toEndOf="@id/left_border_guideline"
-                app:layout_constraintTop_toBottomOf="@id/features_image_view" />
-
-            <TextView
-                android:id="@+id/new_shorts_films_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shorts"
-                android:textColor="@android:color/white"
-                app:layout_constraintBottom_toBottomOf="@id/new_shorts_films_image_view"
-                app:layout_constraintEnd_toEndOf="@id/new_shorts_films_image_view"
-                app:layout_constraintStart_toStartOf="@id/new_shorts_films_image_view"
-                app:layout_constraintTop_toTopOf="@id/new_shorts_films_image_view" />
-
-            <ImageView
-                android:id="@+id/music_videos_image_view"
-                android:layout_width="0dp"
-                android:layout_height="250dp"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:contentDescription="@string/music_videos"
-                android:src="@drawable/music_video"
-                app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
-                app:layout_constraintStart_toEndOf="@id/left_border_guideline"
-                app:layout_constraintTop_toBottomOf="@id/new_shorts_films_image_view" />
-
-            <TextView
-                android:id="@+id/music_videos_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/music_videos"
-                android:textColor="@android:color/white"
-                app:layout_constraintBottom_toBottomOf="@id/music_videos_image_view"
-                app:layout_constraintEnd_toEndOf="@id/music_videos_image_view"
-                app:layout_constraintStart_toStartOf="@id/music_videos_image_view"
-                app:layout_constraintTop_toTopOf="@id/music_videos_image_view" />
-
-            <ImageView
-                android:id="@+id/documentaries_image_view"
-                android:layout_width="0dp"
-                android:layout_height="250dp"
-                android:layout_marginBottom="@dimen/spacing_medium"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:contentDescription="@string/documentaries"
-                android:src="@drawable/documentaries"
-                app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
-                app:layout_constraintStart_toEndOf="@id/left_border_guideline"
-                app:layout_constraintTop_toBottomOf="@id/music_videos_image_view" />
-
-            <TextView
-                android:id="@+id/documentaries_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/documentaries"
-                android:textColor="@android:color/white"
-                app:layout_constraintBottom_toBottomOf="@id/documentaries_image_view"
-                app:layout_constraintEnd_toEndOf="@id/documentaries_image_view"
-                app:layout_constraintStart_toStartOf="@id/documentaries_image_view"
-                app:layout_constraintTop_toTopOf="@id/documentaries_image_view" />
-
+                app:layout_constraintTop_toBottomOf="@id/monthly_contest_text_view" />
 
             <ImageView
                 android:id="@+id/original_films_image_view"
@@ -197,7 +133,7 @@
                 android:src="@drawable/original_films"
                 app:layout_constraintEnd_toStartOf="@id/right_border_guideline"
                 app:layout_constraintStart_toEndOf="@id/left_border_guideline"
-                app:layout_constraintTop_toBottomOf="@id/documentaries_image_view" />
+                app:layout_constraintTop_toBottomOf="@id/monthly_contest_banner" />
 
             <TextView
                 android:id="@+id/original_films_text_view"

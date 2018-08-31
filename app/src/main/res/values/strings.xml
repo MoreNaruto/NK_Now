@@ -54,12 +54,13 @@
     <string name="documentaries">DOCUMENTARIES</string>
     <string name="nk_live">NK LIVE</string>
     <string name="nk_link">NK LINK</string>
-    <string name="featured_finalists">FEATURED FINALISTS</string>
+    <string name="explore_finalists">EXPLORE FINALISTS</string>
     <string name="trending_events">TRENDING EVENTS</string>
     <string name="fav_features">FAV FEATURES</string>
     <string name="favorite_music_videos">FAV MUSIC VIDEOS</string>
     <string name="favorite_documentaries">FAV DOCUMENTARIES</string>
     <string name="best_in_fest">BEST IN FEST</string>
+    <string name="monthly_contests">MONTHLY CONTEST</string>
     <string name="sundance">SUNDANCE</string>
     <string name="tribeca">TRIBECA</string>
     <string name="cannes">CANNES</string>
